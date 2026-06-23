@@ -1,0 +1,203 @@
+:root {
+    --roxo-sujinho: #fdfaff;
+}
+
+*{
+    font-family: "Instrument Sans", "Inter";
+    font-kerning: normal;
+    letter-spacing: 0.0em;
+}
+
+body{
+    margin: 0;
+    background-color: var(--roxo-sujinhpo);
+}
+
+#tudo{
+    padding-top: 163px;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    width: 1340px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.externo{
+    box-sizing: border-box;
+    background-color: #fff;
+    height: 250px;
+    width: 400px;
+    border-radius: 20px;
+}
+.interno{
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 22px;
+    text-align: center;
+    width: 300px
+}
+.interno2{
+    margin-top: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #723c90;
+    text-align: center;
+    top:30px;
+}
+#fraseMain{
+    font-size: 45px;
+    font-weight: 600;
+    margin-left: 50px;
+    margin-top: 200px;
+    text-align: start;
+    width: 680px;
+    
+    color: #733c90;
+}
+#domine{
+        color: #790B88;
+        font-style: normal;
+        font-size: 45px;
+        font-weight: 600;
+}
+#textoApoio{
+    padding-left: 50px;
+    padding-top: 20px;
+    font-size: 20.5px;
+    text-align: start;
+    width: 590px;
+}
+#oi{
+    box-sizing: border-box;
+    margin-top: -385px;
+    margin-left: 800px;
+    width: 710px;
+}
+header{
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 2px 4px #00000038;
+}
+main{
+    margin-top: 70px;
+}
+#cta{
+    margin-left: 50px;
+    margin-top: 70px;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, #723c90, #7B4AE0) border-box;
+    border-radius: 30px;
+    height: 65px;
+    width: 320px;
+    font-size: 25px;
+    transition: 500ms ease-in-out;
+}
+#logo{
+    display: flex;
+    position: absolute;
+    top: 10%;
+    justify-content: center;
+    margin-left: 50px;
+    height: 50px;
+}
+#botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    margin: 0 auto;
+    gap: 35px;
+    font-size: 18px;
+}
+#botoes a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+#monitore{
+    width: 900px;
+    font-size: 45px;
+    margin: auto;
+    text-align: center;
+    margin-top: 90px;
+    font-weight: 600;
+    color: #733c90e4;
+    font-weight: 600;
+}
+#antes{
+    font-weight: 600;
+    color: #790B88;
+}
+#textoMonitore{
+    display: flex;
+    width: 700px;
+    font-size: 2cap;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: medium;
+    color: #000000;
+}
+#cta:hover{
+    transition: 500ms ease-in-out;
+    background: linear-gradient(to right, #723c90, #7B4AE0);
+    color: #fff;
+}
+#cta a{
+    text-decoration: none;
+    color: #000000;
+}
+#fundinho{
+    display: flex;
+    position: absolute;
+    top: 900px;
+    width: 1105px;
+    height: 800px;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+#plat{
+    display: flex;
+    margin-top: 450px;
+    font-size: 45px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    color: #723c90;
+}
+#celular{
+    margin-left: 522.5px ;
+    width: 30%;
+    margin-top: 40px;
+}
+#cta1{
+    margin-left: 580px;
+    margin-top: 80px;
+    border: 2px solid transparent;
+    background-color:#7B4AE0;
+    border-radius: 30px;
+    height: 65px;
+    width: 320px;
+    font-size: 25px;
+    transition: 500ms ease-in-out;
+} 
+#cta1 a{
+    color: #fff;
+    text-decoration: none;
+}
+#fundoquemsomos img{
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 60px;
+    justify-content: center;
+    z-index: -1;
+}
