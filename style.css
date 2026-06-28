@@ -88,6 +88,12 @@ body{
     margin-top: -470px;
     margin-left: 750px;
     width: 50%;
+    transition: 500ms;
+}
+#img_main:hover{
+    transition: 500ms;
+    width: 52%;
+    cursor: pointer;
 }
 
 header{
@@ -147,11 +153,15 @@ main{
     height: 50px;
 }
 
+#logo:hover{
+    cursor: pointer;
+}
+
 #botoes{
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100%;
+    height: 100%;
     margin: 0 auto;
     gap: 35px;
     font-size: 18px;
@@ -161,12 +171,28 @@ main{
     text-decoration: none;
     color: black;
     font-weight: 500;
-    transition: 300ms;
+    position: relative;
+    transition: color 300ms ease;
+}
+
+#botoes a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: #7B4AE0;
+    border-radius: 2px;
+    transition: width 300ms ease;
 }
 
 #botoes a:hover{
     color: #7B4AE0;
-    transition: 250ms ease-in;
+}
+
+#botoes a:hover::after{
+    width: 100%;
 }
 
 #spam{
@@ -196,11 +222,11 @@ main{
     color: #000000;
     scroll-margin-top: 250px;
 }
-
 #cta:hover{
-    transition: 500ms;
+    transition: 800ms;
     background: linear-gradient(to right, #723c90, #7B4AE0);
     color: #fff;
+    cursor: pointer;
 }
 
 #cta a{
@@ -375,12 +401,64 @@ footer nav a{
 #links{
     margin-left: 50%;
 }
+.inicio{
+    border: 2px solid transparent;
+    width: 8%;
+}
+.beneficio{
+    border: 2px solid transparent;
+    width: 8%;
+}
+.plataforma{
+    border: 2px solid transparent;
+    width: 8%;
+}
+.quem{
+    border: 2px solid transparent;
+    width: 19%;
+}
+
+.inicio:hover{
+    text-decoration: underline;
+}
+.beneficio:hover{
+    text-decoration: underline;
+}
+.plataforma:hover{
+    text-decoration: underline;
+}
+.quem:hover{
+    text-decoration: underline;
+}
 
 #legal{
     margin-top: -240px;
     margin-left: 75%;
     margin-bottom: 180px;
 
+}
+
+.termos{
+    border: 2px solid transparent;
+    width: 40%;
+}
+.coockies{
+    border: 2px solid transparent;
+    width: 55%;
+}
+.privacidade{
+    border: 2px solid transparent;
+    width: 65%;
+}
+
+.termos:hover{
+    text-decoration: underline;
+}
+.coockies:hover{
+    text-decoration: underline;
+}
+.privacidade:hover{
+    text-decoration: underline;
 }
 
 footer img{
