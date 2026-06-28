@@ -1,0 +1,499 @@
+:root {
+    --roxo-sujinho: #fefcff;
+    --roxo-quistock: #723c90;
+}
+
+*{
+    font-family: Poppins;
+    font-kerning: normal;
+    letter-spacing: 0.0em;
+    /*outline: 1px solid red;*/
+    
+}
+
+body{
+    background-color: var(--roxo-sujinho);
+    margin: 0;
+}
+
+#tudo_caixas{
+    padding-top: 163px;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    width: 92%;
+    align-items: center;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.externo{
+    box-sizing: border-box;
+    background-color: #fff;
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+.interno{
+    display: flex;
+    margin-top: 40px;
+    padding-left: 50px;
+    font-size: 21px;
+    text-align: center;
+    align-items: center;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.interno2{
+    margin-top: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #723c90;
+    text-align: center;
+    top:30px;
+}
+
+#fraseMain{
+    font-size: 45px;
+    font-weight: 600;
+    margin-left: 50px;
+    margin-top: 200px;
+    text-align: start;
+    width: 680px;
+    
+    color: #733c90;
+}
+
+#domine{
+        color: #790B88;
+        font-style: normal;
+        font-size: 45px;
+        font-weight: 600;
+}
+
+#textoApoio{
+    padding-left: 50px;
+    padding-top: 20px;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: start;
+    width: 700px;
+}
+
+#img_main{
+    box-sizing: border-box;
+    margin-top: -470px;
+    margin-left: 750px;
+    width: 50%;
+    transition: 500ms;
+}
+#img_main:hover{
+    transition: 500ms;
+    width: 52%;
+    cursor: pointer;
+}
+
+header{
+    background-color: #fff;
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 2px 4px #00000038;
+}
+
+main{
+    margin-top: 70px;
+}
+
+#cta{
+    margin-top: 70px;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, #723c90, #7B4AE0) border-box;
+    border-radius: 30px;
+    height: 65px;
+    width: 350px;
+    font-size: 23px;
+    font-weight: 500;
+    color: #612383;
+    transition: 500ms ease-in-out;
+}
+
+#monitore{
+    display: flex;
+    color: #790B88;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 600;
+    width: 70%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15%;
+    margin-top: 50px;
+}
+
+.span{
+    color: #612383;
+}
+
+#logo{
+    display: flex;
+    position: absolute;
+    top: 10%;
+    justify-content: center;
+    margin-left: 50px;
+    height: 50px;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+#botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    gap: 35px;
+    font-size: 18px;
+}
+
+#botoes a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    transition: color 300ms ease;
+}
+
+#botoes a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: #7B4AE0;
+    border-radius: 2px;
+    transition: width 300ms ease;
+}
+
+#botoes a:hover{
+    color: #7B4AE0;
+}
+
+#botoes a:hover::after{
+    width: 100%;
+}
+
+#spam{
+    width: 1000px;
+    font-size: 45px;
+    margin: auto;
+    text-align: center;
+    margin-top: 90px;
+    font-weight: 600;
+    color: #733c90e4;
+    font-weight: 600;
+}
+
+#antes{
+    font-weight: 600;
+    color: #790B88;
+}
+
+#textoMonitore{
+    display: flex;
+    width: 700px;
+    font-size: 2cap;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: medium;
+    color: #000000;
+    scroll-margin-top: 250px;
+}
+#cta:hover{
+    transition: 800ms;
+    background: linear-gradient(to right, #723c90, #7B4AE0);
+    color: #fff;
+    cursor: pointer;
+}
+
+#cta a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#fundinho{
+    display: flex;
+    position: absolute;
+    top: 920px;
+    width: 1122px;
+    height: 700px;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+#plat{
+    display: flex;
+    margin-top: 310px;
+    font-size: 45px;
+    font-weight: 600;
+    justify-content: center;
+    color: #723c90;
+}
+
+#celular{
+    margin-left: 522.5px ;
+    width: 30%;
+    margin-top: 100px;
+    scroll-margin-top: 250px;
+}
+
+#cta1{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-left: 580px;
+    margin-top: 100px;
+    border: 2px solid transparent;
+    background: linear-gradient(to right, #790B88, #7B4AE0);
+    border-radius: 30px;
+    height: 65px;
+    width: 320px;
+    font-size: 25px;
+    background-size: 200% auto;
+}
+
+#cta1::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, #7B4AE0, #790B88); /* Cor Invertida para o Hover */
+    opacity: 0; /* Começa invisível */
+    z-index: -1;
+    transition: opacity 500ms ease-in-out; /* Transição de opacidade funciona perfeitamente! */
+}
+
+#cta1:hover::before {
+    opacity: 1; /* Fica visível suavemente */
+}
+
+#cta1 a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#fundoquemsomos img{
+    display: flex;
+    position: absolute;
+    margin-top: 120px;
+    justify-content: center;
+    z-index: -1;
+    width: 100%;
+    height: 780px;
+}
+
+.textos_plat{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 27%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: -627px;
+    color: #723c90;
+    font-weight: 600;
+}
+.textos_plat2{
+    display: flex;
+    width: 30%;
+    height: auto;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 65%;
+    margin-top: 25px;
+    color: #723c90;
+    font-weight: 600;
+}
+
+.textos_plat h4{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.textos_plat h2{
+    font-size: 32px;
+    margin-bottom: -15px;
+}
+
+
+.textos_plat2 h4{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.textos_plat2 h2{
+    margin-bottom: -15px;
+    font-size: 32px;
+}
+
+#texto_quemSomos{
+    width: 35%;
+    margin-left: 5%;
+    margin-top: 300px;
+    color: #fff;
+    scroll-margin-top: 210px;
+}
+
+#texto_quemSomos h2{
+    background: linear-gradient(to right, #F4E0FF, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: -25px;
+}
+
+#texto_quemSomos h4{
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+}
+
+#img_quemsomos{
+    border-radius: 30px;
+    width: 35%;
+    margin-left: 60%;
+    margin-top: -450px;
+}
+
+footer nav{
+    margin-top: -250px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: larger;
+}
+footer nav h2{
+    margin-bottom: 5px;
+    font-size: 25px;
+
+}
+footer nav a{
+    color: #723c90;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#links{
+    margin-left: 50%;
+}
+.inicio{
+    border: 2px solid transparent;
+    width: 8%;
+}
+.beneficio{
+    border: 2px solid transparent;
+    width: 8%;
+}
+.plataforma{
+    border: 2px solid transparent;
+    width: 8%;
+}
+.quem{
+    border: 2px solid transparent;
+    width: 19%;
+}
+
+.inicio:hover{
+    text-decoration: underline;
+}
+.beneficio:hover{
+    text-decoration: underline;
+}
+.plataforma:hover{
+    text-decoration: underline;
+}
+.quem:hover{
+    text-decoration: underline;
+}
+
+#legal{
+    margin-top: -240px;
+    margin-left: 75%;
+    margin-bottom: 180px;
+
+}
+
+.termos{
+    border: 2px solid transparent;
+    width: 40%;
+}
+.coockies{
+    border: 2px solid transparent;
+    width: 50%;
+}
+.privacidade{
+    border: 2px solid transparent;
+    width: 65%;
+}
+
+.termos:hover{
+    text-decoration: underline;
+}
+.coockies:hover{
+    text-decoration: underline;
+}
+.privacidade:hover{
+    text-decoration: underline;
+}
+
+footer img{
+    margin-left: 50px;
+}
+
+#logo1{
+    margin-top: 310px;
+    margin-bottom: 30px;
+}
+
+#email_pin{
+    display: flex;
+    flex-direction: column;
+}
+
+#email_pin img{
+    width: 30px;
+    margin-top: 20px;
+}
+
+#email_pin p{
+    margin-left: 90px;
+    margin-top: -30px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#direitos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97.35%;
+    border-top: 2px solid #5d5d5d;
+    margin-top: 90px;
+    padding: 20px;
+    font-weight: 600;
+}
