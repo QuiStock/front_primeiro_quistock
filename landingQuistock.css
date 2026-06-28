@@ -1,5 +1,6 @@
 :root {
-    --roxo-sujinho: #ffffff;
+    --roxo-sujinho: #fefcff;
+    --roxo-quistock: #723c90;
 }
 
 *{
@@ -160,11 +161,12 @@ main{
     text-decoration: none;
     color: black;
     font-weight: 500;
+    transition: 300ms;
 }
 
 #botoes a:hover{
     color: #7B4AE0;
-    transition: 500ms ease-in;
+    transition: 250ms ease-in;
 }
 
 #spam{
@@ -326,7 +328,7 @@ main{
     margin-left: 5%;
     margin-top: 300px;
     color: #fff;
-    scroll-margin-top: 230px;
+    scroll-margin-top: 210px;
 }
 
 #texto_quemSomos h2{
