@@ -92,7 +92,7 @@ body{
 }
 #img_main:hover{
     transition: 500ms;
-    width: 52%;
+    transform: scale(1.028);
     cursor: pointer;
 }
 
