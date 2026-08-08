@@ -11,6 +11,8 @@
     font-kerning: normal;
     letter-spacing: 0.0em;
     /*outline: 1px solid red;*/
+    margin: 0;
+    padding: 0;
     
 }
 
@@ -33,6 +35,9 @@ body{
         var(--roxo-quistock),
         var(--azul)
     );
+
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
 }
 
 ::-webkit-scrollbar {
@@ -63,6 +68,10 @@ main{
     height: calc(100dvh - 4.3vw);
     height: calc(100vh - 4.3vw);
     max-width: 100%;
+    scroll-margin-top: clamp(3rem, 4.3vw, 10rem);
+
+    height: auto;
+    min-height: calc(100dvh - 4.3vw);
 }
 
 #beneficios, #palataforma, #quem-somos {
@@ -76,7 +85,7 @@ header{
     z-index: 3;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: clamp(3rem, 4.3vw, 10rem);
     box-shadow: 0px 2px 4px #00000038;
 
@@ -206,8 +215,7 @@ header{
     padding: min(0.5rem, 2rem) 0;
 }
 
-#cta{
-    border: 2px solid var(--roxo-quistock);
+.cta {
     background:
         linear-gradient(to right, var(--roxo-quistock), var(--azul));
     border-radius: 3rem;
@@ -233,7 +241,7 @@ header{
     z-index: 1;
 }
 
-#cta::before {
+.cta::before {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -245,24 +253,21 @@ header{
     z-index: -1;
 }
 
-#cta:hover::before {
+.cta:hover::before {
     opacity: 1;
 }
 
 /* beneficios */
 #beneficios {
     box-sizing: border-box;
-    scroll-margin-top: clamp(3rem, 4.3vw, 10rem);
-    padding: 0 min(4rem, 8%);
+    padding: min(2rem, 10%) min(4rem, 8%);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
-    min-height: calc(100dvh - 4.3vw);
     flex-wrap: nowrap;
-    gap: 5rem;
+    gap: 2.5rem;
 }
 
 #beneficios * {
@@ -283,7 +288,7 @@ header{
 }
 
 .titulo-container > p:nth-child(1) {
-    font-size: clamp(2rem, 2vw + 0.5rem, 10rem);
+    font-size: clamp(2rem, 2.5vw + 0.5rem, 10rem);
     font-weight: 600;
     width: 60vw;
     color: var(--roxo-sujinho);
@@ -294,7 +299,7 @@ header{
 }
 
 .titulo-container > p:nth-child(2) {
-    font-size: clamp(0.5rem, 0.5vw + 0.5rem, 2rem);
+    font-size: clamp(0.5rem, 0.6vw + 0.5rem, 2rem);
     width: 50vw;
     color: var(--roxo-sujinho);
 }
@@ -305,7 +310,7 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
 
     width: 100%;
 }
@@ -313,9 +318,9 @@ header{
 .caixa {
     background-color: var(--roxo-sujinho);
     aspect-ratio: unset;
-    height: auto;
-    min-width: 0;
-    width: clamp(9rem, 20vw, 16rem);
+    min-height: 0;
+    height: clamp(3rem, 20vh, 20rem);
+    width: 20rem;
     padding: min(1rem, 6%) !important;
     /*
     width: clamp(2vw, 20rem, 100vw);
@@ -337,13 +342,13 @@ header{
 }
 
 .titulo-caixa {
-    font-size: clamp(1rem, 1vw + 0.5rem, 3rem);
+    font-size: clamp(1.5rem, 1vw + .5rem, 3rem);
     font-weight: 500;
     color: var(--roxo-quistock);
 }
 
 .texto-caixa {
-    font-size: clamp(0.5rem, 0.5vw + 0.5rem, 1rem);
+    font-size: clamp(.75rem, .5vw + .5rem, 1rem);
 }
 
 #domine{
@@ -353,8 +358,89 @@ header{
         font-weight: 600;
 }
 
+/* plataforma */
+#plataforma {
+    background-color: var(--roxo-sujinho);
+    border-radius: 4rem;
 
-@media screen and (max-width: 480px) {
+    /*
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2vw, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(5vh, 1fr));
+
+    grid-template-areas:
+    "box-1";
+    */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    padding: min(2rem, 4%) 0;
+}
+
+#plat {
+    color: var(--roxo-quistock);
+    font-weight: 600;
+    font-size: clamp(2rem, 2.5vw + 0.5rem, 10rem);
+    justify-self: center;
+}
+
+.plataforma-bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 0 min(4rem, 8%);
+}
+
+.textos-plat {
+    color: var(--roxo-quistock);
+}
+
+.textos-plat h4 {
+    font-weight: 400;
+}
+
+.interferencias h2, .interferencias h4, .fluxo h2, .fluxo h4 {
+    margin: 0; padding: 0;
+}
+
+.fluxo, .interferencias {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fluxo {
+    align-self: flex-start;
+    flex: 1.1;
+    min-width: 0;
+}
+
+.fluxo h2, .interferencias h2 {
+    font-size: clamp(.75rem, 1vw + 1rem, 2rem);
+}
+
+.interferencias {
+    align-self: flex-end;
+    width: 45vw;
+    flex: 1.2;
+    min-width: 0;
+}
+
+.fluxo h4, .interferencias h4 {
+    font-size: clamp(.5rem, .75vw + .5rem, 4rem);
+}
+
+#celular{
+    height: auto;
+    width: 25vw;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 800px) {
     #hero p:nth-child(1) {
         width: 100%;
         line-height: 5.5vh;
@@ -372,84 +458,38 @@ header{
         width: 35vw;
         padding: min(1rem, 6%) !important;
     }
-}
 
+    .plataforma-bottom-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-#spam{
-    width: 1000px;
-    font-size: 45px;
-    margin: auto;
-    text-align: center;
-    margin-top: 90px;
-    font-weight: 600;
-    color: #733c90e4;
-    font-weight: 600;
-}
+    .fluxo {
+        order: 0;
+    }
 
-#antes{
-    font-weight: 600;
-    color: #790B88;
-}
+    .interferencias {
+        order: 1;
+    }
 
-#textoMonitore{
-    display: flex;
-    width: 700px;
-    font-size: 2cap;
-    margin: auto;
-    text-align: center;
-    margin-top: 20px;
-    font-weight: medium;
-    color: #000000;
-}
+    .textos-plat {
+        margin: 0;
+    }
 
+    .fluxo, .interferencias {
+        align-self: center;
+        height: auto;
+        width: 80vw;
+        text-align: center;
+    }
 
-#plat{
-    display: flex;
-    margin-top: 310px;
-    font-size: 45px;
-    font-weight: 600;
-    justify-content: center;
-    color: #723c90;
-}
+    #celular {
+        order: 2;
+    }
 
-#celular{
-    margin-left: 522.5px ;
-    width: 30%;
-    margin-top: 100px;
-}
-
-#cta1{
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    margin-left: 580px;
-    margin-top: 100px;
-    border: 2px solid transparent;
-    background: linear-gradient(to right, #790B88, #7B4AE0);
-    border-radius: 30px;
-    height: 65px;
-    width: 320px;
-    font-size: 25px;
-    background-size: 200% auto;
-}
-
-#cta1::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to right, #7B4AE0, #790B88); /* Cor Invertida para o Hover */
-    opacity: 0; /* Começa invisível */
-    z-index: -1;
-    transition: opacity 500ms ease-in-out; /* Transição de opacidade funciona perfeitamente! */
-}
-
-#cta1:hover::before {
-    opacity: 1; /* Fica visível suavemente */
-}
-
-#cta1 a{
-    color: #fff;
-    text-decoration: none;
+    .cta {
+        order: 3;
+    }
 }
 
 #fundoquemsomos img{
@@ -462,6 +502,7 @@ header{
     height: 780px;
 }
 
+/*
 .textos_plat{
     display: flex;
     flex-direction: column;
@@ -485,27 +526,8 @@ header{
     color: #723c90;
     font-weight: 600;
 }
+    */
 
-.textos_plat h4{
-    font-size: 22px;
-    font-weight: 400;
-}
-
-.textos_plat h2{
-    font-size: 32px;
-    margin-bottom: -15px;
-}
-
-
-.textos_plat2 h4{
-    font-size: 22px;
-    font-weight: 400;
-}
-
-.textos_plat2 h2{
-    margin-bottom: -15px;
-    font-size: 32px;
-}
 
 #texto_quemSomos{
     width: 35%;
