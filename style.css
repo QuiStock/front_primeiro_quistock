@@ -82,7 +82,7 @@ main{
 header{
     background-color: var(--roxo-sujinho);
     position: fixed;
-    z-index: 3;
+    z-index: 1000;
     top: 0;
     left: 0;
     width: 100vw;
@@ -158,10 +158,6 @@ header{
     padding: 0 min(4rem, 8%);
 
     box-sizing: border-box;
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 
     position: relative;
 }
@@ -260,7 +256,7 @@ header{
 /* beneficios */
 #beneficios {
     box-sizing: border-box;
-    padding: min(2rem, 10%) min(4rem, 8%);
+    padding: min(3rem, 20%) min(4rem, 8%);
 
     display: flex;
     flex-direction: column;
@@ -288,7 +284,7 @@ header{
 }
 
 .titulo-container > p:nth-child(1) {
-    font-size: clamp(2rem, 2.5vw + 0.5rem, 10rem);
+    font-size: clamp(1.5rem, 2.5vw + 0.5rem, 10rem);
     font-weight: 600;
     width: 60vw;
     color: var(--roxo-sujinho);
@@ -342,13 +338,13 @@ header{
 }
 
 .titulo-caixa {
-    font-size: clamp(1.5rem, 1vw + .5rem, 3rem);
+    font-size: clamp(1.3rem, 1vw + .5rem, 3rem);
     font-weight: 500;
     color: var(--roxo-quistock);
 }
 
 .texto-caixa {
-    font-size: clamp(.75rem, .5vw + .5rem, 1rem);
+    font-size: clamp(.7rem, .5vw + .5rem, 1rem);
 }
 
 #domine{
@@ -377,7 +373,7 @@ header{
     align-items: center;
     gap: 2rem;
 
-    padding: min(2rem, 4%) 0;
+    padding: min(3rem, 20%) min(4rem, 8%);
 }
 
 #plat {
@@ -397,6 +393,7 @@ header{
 
 .textos-plat {
     color: var(--roxo-quistock);
+    text-wrap: pretty;
 }
 
 .textos-plat h4 {
@@ -440,66 +437,15 @@ header{
     flex-shrink: 0;
 }
 
-@media screen and (max-width: 800px) {
-    #hero p:nth-child(1) {
-        width: 100%;
-        line-height: 5.5vh;
-    }
-
-    #hero p:nth-child(2) {
-        width: 100%;
-    }
-
-    .container-caixas {
-        flex-direction: column;
-    }
-
-    .caixa {
-        width: 35vw;
-        padding: min(1rem, 6%) !important;
-    }
-
-    .plataforma-bottom-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .fluxo {
-        order: 0;
-    }
-
-    .interferencias {
-        order: 1;
-    }
-
-    .textos-plat {
-        margin: 0;
-    }
-
-    .fluxo, .interferencias {
-        align-self: center;
-        height: auto;
-        width: 80vw;
-        text-align: center;
-    }
-
-    #celular {
-        order: 2;
-    }
-
-    .cta {
-        order: 3;
-    }
-}
-
-#fundoquemsomos img{
+/* quem somos */
+#quem-somos {
     display: flex;
-    position: absolute;
-    margin-top: 120px;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    z-index: -1;
-    width: 100%;
-    height: 780px;
+    align-self: center;
+    gap: 5rem;
+    padding: min(6.5rem, 20%) min(4rem, 8%);
 }
 
 /*
@@ -529,34 +475,105 @@ header{
     */
 
 
-#texto_quemSomos{
-    width: 35%;
-    margin-left: 5%;
-    margin-top: 300px;
-    color: #fff;
+#texto-quemSomos{
+    color: var(--roxo-sujinho);
+    width: 35vw;
+    align-self: center;
+    text-wrap: pretty;
 }
 
-#texto_quemSomos h2{
-    background: linear-gradient(to right, #F4E0FF, #fff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
-    display: inline-block;
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: -25px;
+#texto-quemSomos h2{
+    font-size: clamp(2rem, 2.5vw + 0.5rem, 10rem);
+    font-weight: 600;
 }
 
-#texto_quemSomos h4{
+#texto-quemSomos h4{
+    font-size: clamp(.75rem, .75vw + .5rem, 4rem);
     font-weight: 400;
-    font-size: 20px;
-    letter-spacing: 0.05em;
 }
 
-#img_quemsomos{
-    border-radius: 30px;
-    width: 35%;
-    margin-left: 60%;
-    margin-top: -450px;
+#img-quemsomos{
+    aspect-ratio: 4 / 3;
+    height: auto;
+    width: 40vw;
+    margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+    #hero p:nth-child(1) {
+        width: 100%;
+        line-height: 5.5vh;
+    }
+
+    #hero p:nth-child(2) {
+        width: 100%;
+    }
+
+    .titulo-container > p:nth-child(1) {
+        width: 85vw;
+    }
+
+    .titulo-container > p:nth-child(2) {
+        width: 85vw;
+    }
+
+    .container-caixas {
+        flex-direction: column;
+    }
+
+    .caixa {
+        width: 45vw;
+        padding: min(1rem, 6%) !important;
+    }
+
+    .plataforma-bottom-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .fluxo {
+        order: 0;
+    }
+
+    .interferencias {
+        order: 1;
+    }
+
+    .textos-plat {
+        margin: 0;
+    }
+
+    .fluxo, .interferencias {
+        align-self: center;
+        height: auto;
+        width: 80vw;
+        text-align: center;
+    }
+
+    #celular {
+        order: 2;
+        width: 60vw;
+        margin-bottom: 2.5rem;
+    }
+
+    .cta {
+        order: 3;
+        margin: 0;
+    }
+
+    #quem-somos {
+        gap: 2rem;
+    }
+
+    #texto-quemSomos {
+        width: 90vw;
+        text-align: center;
+    }
+
+    #img-quemsomos {
+        width: 80vw;
+    }
 }
 
 footer nav{
